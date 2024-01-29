@@ -8,6 +8,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@inkeep/widgets": "^0.2.258",
     "@remix-run/node": "^2",
     "@remix-run/react": "^2",
     "@remix-run/serve": "^2",
