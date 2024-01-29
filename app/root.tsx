@@ -17,6 +17,8 @@ import {
 import { getContacts, createEmptyContact } from "./data";
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import appStylesHref from "./app.css";
+import ChatButton from "./components/InkeepChatButton";
+import InkeepSearchBar from "./components/InkeepSearchBar";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: appStylesHref },
@@ -85,6 +87,7 @@ export default function App() {
             <Form method="post">
               <button type="submit">New</button>
             </Form>
+            <InkeepSearchBar />
           </div>
           <nav>
             {contacts.length ? (
@@ -130,6 +133,9 @@ export default function App() {
         <Scripts />
         <LiveReload />
       </body>
+      <footer>
+        <ChatButton />
+      </footer>
     </html>
   );
 }
